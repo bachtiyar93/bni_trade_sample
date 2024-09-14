@@ -1,4 +1,6 @@
 import 'package:bni_trade/core/AppHelpers.dart';
+import 'package:bni_trade/register_state.dart';
+import 'package:bni_trade/routes.dart';
 import 'package:bni_trade/view/color_component.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +12,6 @@ import 'package:provider/provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await initializeDateFormatting('id_ID', null);
   await Hive.initFlutter();
 
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
@@ -55,10 +56,7 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             initialRoute: Main.base,
-            routes: {
-              Main.base: (_) => const Base(),
-              Main.login: (_) => const Login(),
-            },
+            routes: routes,
           ),
         );
       },
@@ -66,9 +64,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Main {
-  static const String base = "/";
-  static const String login = "/login";
-  static const String home = '/home';
 
-}

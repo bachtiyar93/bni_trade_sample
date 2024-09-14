@@ -1,4 +1,5 @@
 
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:bni_trade/view/style.dart';
@@ -15,6 +16,11 @@ import 'NavigationHelper/NavigationHelper.dart';
 class AppHelpers {
   static final BaseNavigationHelper navigation = NavigationHelper();
 
+  static void setShow(String data){
+    if(kDebugMode){
+      log(data);
+    }
+  }
   static Future<bool> hasInternet() async {
     try {
       final result = await InternetAddress.lookup('google.com');
@@ -273,4 +279,6 @@ class AppHelpers {
     box.put(key, data);
     await Hive.close();
   }
+
+
 }
