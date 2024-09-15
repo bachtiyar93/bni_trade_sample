@@ -8,9 +8,19 @@ This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+To get started add the following dependencies:
+web_socket_channel: ^3.0.1
+provider: ^6.1.2
+oktoast: ^3.4.0
+path_provider: ^2.1.4
+intl: ^0.19.0
+hive_flutter: ^1.1.0
+bot_toast: ^4.1.3
+syncfusion_flutter_charts: ^20.2.47
+rxdart: ^0.28.0
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Update in terminal with command
+flutter pub update
+
+Run the app with command
+flutter run add -v for verbose
