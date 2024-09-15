@@ -8,7 +8,10 @@ This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
+
 To get started add the following dependencies:
+using flutter 3 min sdk 3.3.4 or latest using null saftey and activated impeller
+add package:
 web_socket_channel: ^3.0.1
 provider: ^6.1.2
 oktoast: ^3.4.0
